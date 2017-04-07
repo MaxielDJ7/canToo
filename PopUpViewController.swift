@@ -9,9 +9,12 @@
 import UIKit
 
 class PopUpViewController: UIViewController {
+    @IBOutlet weak var quoteText: UILabel!
+    var quoteArray : [String] = ["Hello", "Just Checking"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeQuote()
         
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         // Do any additional setup after loading the view.
@@ -23,11 +26,15 @@ class PopUpViewController: UIViewController {
     }
     
     
-    //MARK: Properties
+    //MARK: action
     
     @IBAction func closePopUp(_ sender: AnyObject) {
         self.view.removeFromSuperview()
     
+    }
+    
+    func changeQuote(){
+        self.quoteText.text = "Changed"
     }
     
 

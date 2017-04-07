@@ -76,6 +76,13 @@
                                             <action selector="closePopUp:" destination="gFf-Pi-jOu" eventType="touchUpInside" id="Ulf-uv-CMy"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNd-eu-vNa">
+                                        <rect key="frame" x="19" y="23" width="194" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -91,10 +98,13 @@
                             <constraint firstItem="2bR-aT-4l2" firstAttribute="centerY" secondItem="ieL-vY-OlN" secondAttribute="centerY" constant="-154" id="jXZ-yM-YEA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="quoteText" destination="LNd-eu-vNa" id="Hiw-gN-DBD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxG-bQ-ZmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="37"/>
+            <point key="canvasLocation" x="784.79999999999995" y="36.431784107946029"/>
         </scene>
     </scenes>
     <resources>

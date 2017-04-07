@@ -13,6 +13,9 @@
 		FE31F8161E956C17005DC0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE31F8151E956C17005DC0A7 /* Assets.xcassets */; };
 		FE31F8191E956C17005DC0A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE31F8171E956C17005DC0A7 /* LaunchScreen.storyboard */; };
 		FE31F8241E956C17005DC0A7 /* canTooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE31F8231E956C17005DC0A7 /* canTooTests.swift */; };
+		FE31F8301E956C73005DC0A7 /* orangeBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FE31F82E1E956C73005DC0A7 /* orangeBg.png */; };
+		FE31F8311E956C73005DC0A7 /* toucanTut.png in Resources */ = {isa = PBXBuildFile; fileRef = FE31F82F1E956C73005DC0A7 /* toucanTut.png */; };
+		FE31F8341E957020005DC0A7 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE31F8331E957020005DC0A7 /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		FE31F81F1E956C17005DC0A7 /* canTooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = canTooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE31F8231E956C17005DC0A7 /* canTooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = canTooTests.swift; sourceTree = "<group>"; };
 		FE31F8251E956C17005DC0A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE31F82E1E956C73005DC0A7 /* orangeBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangeBg.png; path = ../../orangeBg.png; sourceTree = "<group>"; };
+		FE31F82F1E956C73005DC0A7 /* toucanTut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toucanTut.png; path = ../../toucanTut.png; sourceTree = "<group>"; };
+		FE31F8331E957020005DC0A7 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = ../PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,14 @@
 		FE31F80D1E956C17005DC0A7 /* canToo */ = {
 			isa = PBXGroup;
 			children = (
+				FE31F8331E957020005DC0A7 /* PopUpViewController.swift */,
 				FE31F80E1E956C17005DC0A7 /* AppDelegate.swift */,
 				FE31F8101E956C17005DC0A7 /* ViewController.swift */,
 				FE31F8121E956C17005DC0A7 /* Main.storyboard */,
 				FE31F8151E956C17005DC0A7 /* Assets.xcassets */,
 				FE31F8171E956C17005DC0A7 /* LaunchScreen.storyboard */,
 				FE31F81A1E956C17005DC0A7 /* Info.plist */,
+				FE31F8321E956C8E005DC0A7 /* images */,
 			);
 			path = canToo;
 			sourceTree = "<group>";
@@ -94,6 +102,15 @@
 				FE31F8251E956C17005DC0A7 /* Info.plist */,
 			);
 			path = canTooTests;
+			sourceTree = "<group>";
+		};
+		FE31F8321E956C8E005DC0A7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FE31F82F1E956C73005DC0A7 /* toucanTut.png */,
+				FE31F82E1E956C73005DC0A7 /* orangeBg.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +196,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE31F8301E956C73005DC0A7 /* orangeBg.png in Resources */,
 				FE31F8191E956C17005DC0A7 /* LaunchScreen.storyboard in Resources */,
+				FE31F8311E956C73005DC0A7 /* toucanTut.png in Resources */,
 				FE31F8161E956C17005DC0A7 /* Assets.xcassets in Resources */,
 				FE31F8141E956C17005DC0A7 /* Main.storyboard in Resources */,
 			);
@@ -200,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE31F8111E956C17005DC0A7 /* ViewController.swift in Sources */,
+				FE31F8341E957020005DC0A7 /* PopUpViewController.swift in Sources */,
 				FE31F80F1E956C17005DC0A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

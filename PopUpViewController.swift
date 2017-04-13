@@ -8,16 +8,28 @@
 
 import UIKit
 
-class PopUpViewController: UIViewController {
+class PopUpViewController: UIViewController, ParseProtocol {
+    
+    //Properties
+    
+    var feedItems: NSArray = NSArray()
+    var selectedLocation : IncomingData = IncomingData()
+    
     @IBOutlet weak var quoteText: UILabel!
-    var quoteArray : [String] = ["Hello", "Just Checking"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeQuote()
-        
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
-        // Do any additional setup after loading the view.
+        
+        
+        //set delegates & initialize Parse
+        
+        let parse = Parse()
+        parse.delegate = self
+        parse.downloadItems()
+       
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,29 +37,27 @@ class PopUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    //MARK: action
+    //Actions
     
     @IBAction func closePopUp(_ sender: AnyObject) {
         self.view.removeFromSuperview()
     
     }
     
-    func changeQuote(){
-        self.quoteText.text = "Changed"
+    func itemsDownloaded(items:NSArray){
+        
+        feedItems = items
+        for quote in feedItems{
+            
+            // Come back and edit this
+            self.quoteText.text = quote as? String
+        }
+        
     }
     
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    /* Will need function to loop through feeditems, detect if popUp has 
+        been initialized again, and present a different quote */
+    
     
     
     

@@ -66,15 +66,10 @@ class Parse: NSObject, URLSessionDataDelegate {
         
         var jsonResult: NSMutableArray = NSMutableArray()
         
-        //var jsonResult = (data as! NSArray).mutableCopy() as! NSMutableArray
-
-        
         do{
             jsonResult = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as! NSMutableArray
             
             print(jsonResult)
-            
-            //jsonResult = try json
             
         } catch let error as NSError {
             print(error)
@@ -86,17 +81,15 @@ class Parse: NSObject, URLSessionDataDelegate {
         let quotes: NSMutableArray = NSMutableArray()
         
         
-        //for quote in (jsonResult as NSArray)
-        
         for i in 0..<jsonResult.count
         {
             //Store data in dictionary in key-value pairs
             
             print(jsonResult[i])
             
-           //left offf righ
+           /*-----------TYPE CAST ISSUE------------*/
             
-            jsonElement = jsonResult[i] as! String as! NSDictionary
+            jsonElement = jsonResult[i] as! NSDictionary
             
             //Will store each element in the specific JSON object we defined in IncomingData.swift
             
@@ -119,7 +112,7 @@ class Parse: NSObject, URLSessionDataDelegate {
             
         }
         
-        //Closure allows us to use the quotes array in the view controller immediately?
+        //Closure asynchronously allows us to use the quotes array in the view controller immediately
         
         DispatchQueue.main.async(execute: { () -> Void in
             

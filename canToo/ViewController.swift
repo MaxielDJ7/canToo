@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var toucanTut: UIImageView!
     @IBOutlet weak var canTooLabel: UILabel!
     
+    let quoteArray: NSMutableArray = NSMutableArray()
+   
+    
+    
+
+    
     let tapRecon = UITapGestureRecognizer()
     
     
@@ -27,6 +33,23 @@ class ViewController: UIViewController {
         
         toucanTut.addGestureRecognizer(tapRecon)
         
+        let urlPath: String = "https://web.njit.edu/~mid6/service.php"
+        
+        //Retrieves data from DB and handles it
+        
+        if let url = URL(string: urlPath){
+            
+            if let data = try? Data(contentsOf: url){
+                let json = try? JSON(data: data)
+                
+                //print(json!)
+                
+                parse(json: json!)
+                
+            }
+        }
+    
+        //checkQuotes()
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,7 +65,51 @@ class ViewController: UIViewController {
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParentViewController: self)
+        
+        
     }
+    
+    
+    
+    func parse(json: JSON) {
+        
+        for(i , object) in json{
+            
+            let quote = object["quote"].stringValue
+            let author = object["author"].stringValue
+            
+            //print(quote)
+            
+            let data = IncomingData()
+            
+            data.quote = quote
+            data.author = author
+            
+            quoteArray.add(data)
+           
+            //print(data)
+        }
+        
+    }
+    
+    
+    /*func checkQuotes(){
+        
+        //print("count is: ")
+       // print(quoteArray.count)
+        
+        
+        for i in 0..<quoteArray.count{
+        
+            print(quoteArray[i])
+            
+            
+            
+        }
+    }*/
+    
+    
+    
     
 }
 

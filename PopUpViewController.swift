@@ -8,27 +8,24 @@
 
 import UIKit
 
-class PopUpViewController: UIViewController, ParseProtocol {
+class PopUpViewController: UIViewController {
     
     //Properties
     
     var feedItems: NSArray = NSArray()
     var selectedLocation : IncomingData = IncomingData()
     
+    var newArray: NSMutableArray = NSMutableArray()
+    
     @IBOutlet weak var quoteText: UILabel!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         
-        
-        //set delegates & initialize Parse
-        
-        let parse = Parse()
-        parse.delegate = self
-        parse.downloadItems()
-       
+       checkQuotes()
         
     }
 
@@ -43,22 +40,31 @@ class PopUpViewController: UIViewController, ParseProtocol {
         self.view.removeFromSuperview()
     
     }
-    
-    func itemsDownloaded(items:NSArray){
-        
-        feedItems = items
-        for quote in feedItems{
-            
-            // Come back and edit this
-            self.quoteText.text = quote as? String
-        }
-        
-    }
+
     
     /* Will need function to loop through feeditems, detect if popUp has 
         been initialized again, and present a different quote */
     
-    
+    func checkQuotes(){
+     
+     //print("count is: ")
+     // print(quoteArray.count)
+     
+        let otherVC = ViewController()
+        
+        print(otherVC)
+        
+        newArray = otherVC.quoteArray
+        
+        print(newArray.count)
+        
+        /*for i in 0..<newArray.count{
+     
+            print("okay")
+            
+     
+        }*/
+     }
     
     
 

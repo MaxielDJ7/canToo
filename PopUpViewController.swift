@@ -12,7 +12,6 @@ class PopUpViewController: UIViewController {
     
     //Properties
     
-    var feedItems: NSArray = NSArray()
     var selectedLocation : IncomingData = IncomingData()
     
     var newArray: NSMutableArray = NSMutableArray()
@@ -23,49 +22,30 @@ class PopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         
        checkQuotes()
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     //Actions
     
-    @IBAction func closePopUp(_ sender: AnyObject) {
-        self.view.removeFromSuperview()
+    @IBAction func closePopUp(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: {})
+        //print("close")
     
     }
-
     
-    /* Will need function to loop through feeditems, detect if popUp has 
-        been initialized again, and present a different quote */
+    // check is quoteArray passed over
     
     func checkQuotes(){
-     
-     //print("count is: ")
-     // print(quoteArray.count)
-     
-        let otherVC = ViewController()
         
-        print(otherVC)
-        
-        newArray = otherVC.quoteArray
-        
-        print(newArray.count)
-        
-        /*for i in 0..<newArray.count{
-     
-            print("okay")
+        for i in 0..<newArray.count{
+            print(newArray[i])
             
-     
-        }*/
+        }
+   
      }
-    
-    
+
 
 }

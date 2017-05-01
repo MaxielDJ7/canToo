@@ -16,10 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var canTooLabel: UILabel!
     
     let quoteArray: NSMutableArray = NSMutableArray()
-   
-    
-    
-
     
     let tapRecon = UITapGestureRecognizer()
     
@@ -49,26 +45,16 @@ class ViewController: UIViewController {
             }
         }
     
-        //checkQuotes()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
     //MARK: Actions
     
-    func tappedView(){
-        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "quotePopUp") as! PopUpViewController
-        self.addChildViewController(popOverVC)
-        popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParentViewController: self)
-        
-        
-    }
     
+    
+    @IBAction func tappedView(_ sender: Any) {
+        self.performSegue(withIdentifier: "popUpSegue", sender: self)
+    }
     
     
     func parse(json: JSON) {
@@ -93,22 +79,16 @@ class ViewController: UIViewController {
     }
     
     
-    /*func checkQuotes(){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //print("count is: ")
-       // print(quoteArray.count)
-        
-        
-        for i in 0..<quoteArray.count{
-        
-            print(quoteArray[i])
-            
-            
-            
+        if segue.identifier == "popUpSegue"
+        {
+            if let destinationVC = segue.destination as? PopUpViewController {
+                destinationVC.newArray = quoteArray
+            }
         }
-    }*/
-    
-    
+    }
+
     
     
 }

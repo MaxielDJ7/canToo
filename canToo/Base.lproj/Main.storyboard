@@ -59,16 +59,17 @@
                     <connections>
                         <outlet property="canTooLabel" destination="UQZ-3q-h0C" id="pZL-az-hxI"/>
                         <outlet property="toucanTut" destination="0jL-SC-5Qx" id="yyU-Lu-q09"/>
+                        <segue destination="gFf-Pi-jOu" kind="presentation" identifier="popUpSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="pMZ-af-z1y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1911.2" y="37.331334332833585"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="xn5-YZ-i3P">
             <objects>
-                <viewController storyboardIdentifier="quotePopUp" id="gFf-Pi-jOu" customClass="PopUpViewController" customModule="canToo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quotePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="gFf-Pi-jOu" customClass="PopUpViewController" customModule="canToo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QQ8-7c-OGh"/>
                         <viewControllerLayoutGuide type="bottom" id="St7-k3-zJh"/>
@@ -104,7 +105,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2bR-aT-4l2" firstAttribute="centerX" secondItem="ieL-vY-OlN" secondAttribute="centerX" id="Hls-lx-kpy"/>
                             <constraint firstItem="2bR-aT-4l2" firstAttribute="centerY" secondItem="ieL-vY-OlN" secondAttribute="centerY" constant="-154" id="jXZ-yM-YEA"/>
@@ -116,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxG-bQ-ZmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="36.431784107946029"/>
+            <point key="canvasLocation" x="2937" y="27"/>
         </scene>
     </scenes>
     <resources>

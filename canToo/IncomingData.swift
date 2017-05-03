@@ -29,6 +29,6 @@ class IncomingData: NSObject {
     }
     
     override var description: String {
-        return "Quote: \(String(describing: quote)), Author: \(String(describing: author))"
+        return "\"\(String(describing: quote!))\" \n - \(String(describing: author!))"
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Darwin
 
 class PopUpViewController: UIViewController {
     
@@ -16,14 +17,22 @@ class PopUpViewController: UIViewController {
     
     var newArray: NSMutableArray = NSMutableArray()
     
+    var previousQuote : UInt32 = 0
+
+    
     @IBOutlet weak var quoteText: UILabel!
     
+    @IBOutlet weak var popUp: UIView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       checkQuotes()
+        popUp.layer.cornerRadius = 10
+        
+        //checkQuotes()
+        
+        generateQuote()
         
     }
 
@@ -38,14 +47,34 @@ class PopUpViewController: UIViewController {
     
     // check is quoteArray passed over
     
-    func checkQuotes(){
+    /*func checkQuotes(){
         
         for i in 0..<newArray.count{
+            //let random = arc4random_uniform(UInt32(newArray.count))
+            //quoteText.text = String(describing: newArray[Int(random)])
+
             print(newArray[i])
             
         }
    
-     }
+     }*/
+    
+    func generateQuote(){
+        var randomQuote = arc4random_uniform(UInt32(newArray.count))
+        
+        while previousQuote == randomQuote{
+            randomQuote = arc4random_uniform(UInt32(newArray.count))
+        }
+        previousQuote = randomQuote
+        quoteText.text = String(describing: newArray[Int(randomQuote)])
+   
+        
+        
+        
+    }
+ 
+    
+    
 
 
 }

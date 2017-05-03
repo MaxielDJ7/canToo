@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import UserNotifications
+import UserNotificationsUI
+import Darwin
 
 class ViewController: UIViewController {
     
@@ -19,6 +22,8 @@ class ViewController: UIViewController {
     
     let tapRecon = UITapGestureRecognizer()
     
+    var previousQuote : UInt32 = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +33,7 @@ class ViewController: UIViewController {
         toucanTut.isUserInteractionEnabled = true;
         
         toucanTut.addGestureRecognizer(tapRecon)
+        
         
         let urlPath: String = "https://web.njit.edu/~mid6/service.php"
         
@@ -44,7 +50,6 @@ class ViewController: UIViewController {
                 
             }
         }
-    
 
     }
     
@@ -76,6 +81,8 @@ class ViewController: UIViewController {
             //print(data)
         }
         
+        appointmentNotification()
+
     }
     
     
@@ -88,9 +95,36 @@ class ViewController: UIViewController {
             }
         }
     }
-
     
     
+    
+    //Creates local notifications
+    
+    func appointmentNotification(){
+        
+        var randomQuote = arc4random_uniform(UInt32(quoteArray.count))
+        
+        while previousQuote == randomQuote{
+            randomQuote = arc4random_uniform(UInt32(quoteArray.count))
+        }
+        previousQuote = randomQuote
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Just when you think you can't..."
+        content.body = String(describing: quoteArray[Int(randomQuote)])
+        content.sound = UNNotificationSound.default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest.init(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        let center = UNUserNotificationCenter.current()
+        center.add(request) { (error) in
+            print(error as Any)
+        }
+        print ("Should recieve notification in 10 sec")
+        
+    }
+ 
 }
 
 

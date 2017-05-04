@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var toucanTut: UIImageView!
     @IBOutlet weak var canTooLabel: UILabel!
     
+    @IBOutlet weak var settingsGear: UIImageView!
+    
+        
     let quoteArray: NSMutableArray = NSMutableArray()
     
     let tapRecon = UITapGestureRecognizer()
@@ -30,9 +33,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         tapRecon.addTarget(self, action: #selector(ViewController.tappedView))
-        toucanTut.isUserInteractionEnabled = true;
         
+        toucanTut.isUserInteractionEnabled = true
         toucanTut.addGestureRecognizer(tapRecon)
+        
+
         
         
         let urlPath: String = "https://web.njit.edu/~mid6/service.php"
@@ -57,9 +62,16 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func tappedView(_ sender: Any) {
+    @IBAction func tappedView(gesture: UIGestureRecognizer, sender: Any) {
+        
+
         self.performSegue(withIdentifier: "popUpSegue", sender: self)
+            
+
     }
+    
+   
+   
     
     
     func parse(json: JSON) {
@@ -94,6 +106,7 @@ class ViewController: UIViewController {
                 destinationVC.newArray = quoteArray
             }
         }
+        
     }
     
     
@@ -114,7 +127,7 @@ class ViewController: UIViewController {
         content.body = String(describing: quoteArray[Int(randomQuote)])
         content.sound = UNNotificationSound.default()
         
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 10, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 30, repeats: false)
         let request = UNNotificationRequest.init(identifier: UUID().uuidString, content: content, trigger: trigger)
         
         let center = UNUserNotificationCenter.current()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE10F40F1EBB8ED300E04EE4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10F40D1EBB8ED300E04EE4 /* TableViewController.swift */; };
+		FE10F4121EBBA21200E04EE4 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10F4111EBBA21200E04EE4 /* NotificationSettingsView.swift */; };
 		FE28088B1E9E8E13001FB3A9 /* IncomingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28088A1E9E8E13001FB3A9 /* IncomingData.swift */; };
 		FE28088D1E9EC41F001FB3A9 /* IncomingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28088A1E9E8E13001FB3A9 /* IncomingData.swift */; };
 		FE31F80F1E956C17005DC0A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE31F80E1E956C17005DC0A7 /* AppDelegate.swift */; };
@@ -19,6 +21,11 @@
 		FE31F8311E956C73005DC0A7 /* toucanTut.png in Resources */ = {isa = PBXBuildFile; fileRef = FE31F82F1E956C73005DC0A7 /* toucanTut.png */; };
 		FE31F8341E957020005DC0A7 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE31F8331E957020005DC0A7 /* PopUpViewController.swift */; };
 		FECB557E1EA7CFF2006C6FAF /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB557D1EA7CFF2006C6FAF /* SwiftyJSON.swift */; };
+		FEFC7F151EBAF9320078BD8B /* Settings- gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFC7F131EBAF9320078BD8B /* Settings- gray.png */; };
+		FEFC7F181EBAF9EC0078BD8B /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFC7F171EBAF9EC0078BD8B /* Rectangle.png */; };
+		FEFC7F1A1EBB71670078BD8B /* settings-drkgray.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFC7F191EBB71670078BD8B /* settings-drkgray.png */; };
+		FEFC7F1C1EBB73DC0078BD8B /* settings-blk.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFC7F1B1EBB73DC0078BD8B /* settings-blk.png */; };
+		FEFC7F1E1EBB74980078BD8B /* settings-white.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFC7F1D1EBB74980078BD8B /* settings-white.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE10F40D1EBB8ED300E04EE4 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = SOURCE_ROOT; };
+		FE10F4111EBBA21200E04EE4 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
 		FE28088A1E9E8E13001FB3A9 /* IncomingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingData.swift; sourceTree = "<group>"; };
 		FE31F80B1E956C17005DC0A7 /* canToo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = canToo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE31F80E1E956C17005DC0A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +56,11 @@
 		FE31F82F1E956C73005DC0A7 /* toucanTut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toucanTut.png; path = ../../toucanTut.png; sourceTree = "<group>"; };
 		FE31F8331E957020005DC0A7 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = ../PopUpViewController.swift; sourceTree = "<group>"; };
 		FECB557D1EA7CFF2006C6FAF /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../Downloads/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
+		FEFC7F131EBAF9320078BD8B /* Settings- gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings- gray.png"; path = "../../Settings- gray.png"; sourceTree = "<group>"; };
+		FEFC7F171EBAF9EC0078BD8B /* Rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rectangle.png; path = ../../Rectangle.png; sourceTree = "<group>"; };
+		FEFC7F191EBB71670078BD8B /* settings-drkgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-drkgray.png"; path = "../../settings-drkgray.png"; sourceTree = "<group>"; };
+		FEFC7F1B1EBB73DC0078BD8B /* settings-blk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-blk.png"; path = "../../settings-blk.png"; sourceTree = "<group>"; };
+		FEFC7F1D1EBB74980078BD8B /* settings-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-white.png"; path = "../../settings-white.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +104,10 @@
 			children = (
 				FE31F8331E957020005DC0A7 /* PopUpViewController.swift */,
 				FE31F80E1E956C17005DC0A7 /* AppDelegate.swift */,
+				FE10F4111EBBA21200E04EE4 /* NotificationSettingsView.swift */,
 				FE28088A1E9E8E13001FB3A9 /* IncomingData.swift */,
 				FECB557D1EA7CFF2006C6FAF /* SwiftyJSON.swift */,
+				FE10F40D1EBB8ED300E04EE4 /* TableViewController.swift */,
 				FE31F8101E956C17005DC0A7 /* ViewController.swift */,
 				FE31F8121E956C17005DC0A7 /* Main.storyboard */,
 				FE31F8151E956C17005DC0A7 /* Assets.xcassets */,
@@ -116,6 +132,11 @@
 			children = (
 				FE31F82F1E956C73005DC0A7 /* toucanTut.png */,
 				FE31F82E1E956C73005DC0A7 /* orangeBg.png */,
+				FEFC7F131EBAF9320078BD8B /* Settings- gray.png */,
+				FEFC7F1B1EBB73DC0078BD8B /* settings-blk.png */,
+				FEFC7F1D1EBB74980078BD8B /* settings-white.png */,
+				FEFC7F191EBB71670078BD8B /* settings-drkgray.png */,
+				FEFC7F171EBAF9EC0078BD8B /* Rectangle.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -203,9 +224,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFC7F151EBAF9320078BD8B /* Settings- gray.png in Resources */,
+				FEFC7F1A1EBB71670078BD8B /* settings-drkgray.png in Resources */,
 				FE31F8301E956C73005DC0A7 /* orangeBg.png in Resources */,
+				FEFC7F181EBAF9EC0078BD8B /* Rectangle.png in Resources */,
 				FE31F8191E956C17005DC0A7 /* LaunchScreen.storyboard in Resources */,
 				FE31F8311E956C73005DC0A7 /* toucanTut.png in Resources */,
+				FEFC7F1E1EBB74980078BD8B /* settings-white.png in Resources */,
+				FEFC7F1C1EBB73DC0078BD8B /* settings-blk.png in Resources */,
 				FE31F8161E956C17005DC0A7 /* Assets.xcassets in Resources */,
 				FE31F8141E956C17005DC0A7 /* Main.storyboard in Resources */,
 			);
@@ -226,8 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE31F8111E956C17005DC0A7 /* ViewController.swift in Sources */,
+				FE10F40F1EBB8ED300E04EE4 /* TableViewController.swift in Sources */,
 				FE31F8341E957020005DC0A7 /* PopUpViewController.swift in Sources */,
 				FECB557E1EA7CFF2006C6FAF /* SwiftyJSON.swift in Sources */,
+				FE10F4121EBBA21200E04EE4 /* NotificationSettingsView.swift in Sources */,
 				FE31F80F1E956C17005DC0A7 /* AppDelegate.swift in Sources */,
 				FE28088B1E9E8E13001FB3A9 /* IncomingData.swift in Sources */,
 			);

@@ -14,6 +14,7 @@ class NotificationSettingsView: UIViewController {
     
     @IBOutlet weak var stepper: UIStepper!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +23,13 @@ class NotificationSettingsView: UIViewController {
     @IBAction func stepperValueChange(_ sender: AnyObject) {
         
         counter.text = "\(Int(stepper.value))"
-
+        
+        UserDefaults().set(stepper.value, forKey: "NotificationStepperValue")
+        
+        print("default")
+        print(UserDefaults().integer(forKey: "NotificationStepperValue"))
+        
     }
+    
     
 }

@@ -20,6 +20,8 @@
 		FE31F8301E956C73005DC0A7 /* orangeBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FE31F82E1E956C73005DC0A7 /* orangeBg.png */; };
 		FE31F8311E956C73005DC0A7 /* toucanTut.png in Resources */ = {isa = PBXBuildFile; fileRef = FE31F82F1E956C73005DC0A7 /* toucanTut.png */; };
 		FE31F8341E957020005DC0A7 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE31F8331E957020005DC0A7 /* PopUpViewController.swift */; };
+		FEA37F601EBBC08A000D152D /* Back-50.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA37F5F1EBBC08A000D152D /* Back-50.png */; };
+		FEA37F621EBBC0FE000D152D /* Back-20.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA37F611EBBC0FE000D152D /* Back-20.png */; };
 		FECB557E1EA7CFF2006C6FAF /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECB557D1EA7CFF2006C6FAF /* SwiftyJSON.swift */; };
 		FEFC7F151EBAF9320078BD8B /* Settings- gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFC7F131EBAF9320078BD8B /* Settings- gray.png */; };
 		FEFC7F181EBAF9EC0078BD8B /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFC7F171EBAF9EC0078BD8B /* Rectangle.png */; };
@@ -55,6 +57,8 @@
 		FE31F82E1E956C73005DC0A7 /* orangeBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangeBg.png; path = ../../orangeBg.png; sourceTree = "<group>"; };
 		FE31F82F1E956C73005DC0A7 /* toucanTut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toucanTut.png; path = ../../toucanTut.png; sourceTree = "<group>"; };
 		FE31F8331E957020005DC0A7 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = ../PopUpViewController.swift; sourceTree = "<group>"; };
+		FEA37F5F1EBBC08A000D152D /* Back-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Back-50.png"; path = "../../Back-50.png"; sourceTree = "<group>"; };
+		FEA37F611EBBC0FE000D152D /* Back-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Back-20.png"; path = "../../Back-20.png"; sourceTree = "<group>"; };
 		FECB557D1EA7CFF2006C6FAF /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../Downloads/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		FEFC7F131EBAF9320078BD8B /* Settings- gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings- gray.png"; path = "../../Settings- gray.png"; sourceTree = "<group>"; };
 		FEFC7F171EBAF9EC0078BD8B /* Rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rectangle.png; path = ../../Rectangle.png; sourceTree = "<group>"; };
@@ -134,7 +138,9 @@
 				FE31F82E1E956C73005DC0A7 /* orangeBg.png */,
 				FEFC7F131EBAF9320078BD8B /* Settings- gray.png */,
 				FEFC7F1B1EBB73DC0078BD8B /* settings-blk.png */,
+				FEA37F611EBBC0FE000D152D /* Back-20.png */,
 				FEFC7F1D1EBB74980078BD8B /* settings-white.png */,
+				FEA37F5F1EBBC08A000D152D /* Back-50.png */,
 				FEFC7F191EBB71670078BD8B /* settings-drkgray.png */,
 				FEFC7F171EBAF9EC0078BD8B /* Rectangle.png */,
 			);
@@ -191,6 +197,7 @@
 				TargetAttributes = {
 					FE31F80A1E956C17005DC0A7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5JGKWLKF6Y;
 						ProvisioningStyle = Automatic;
 					};
 					FE31F81E1E956C17005DC0A7 = {
@@ -226,6 +233,8 @@
 			files = (
 				FEFC7F151EBAF9320078BD8B /* Settings- gray.png in Resources */,
 				FEFC7F1A1EBB71670078BD8B /* settings-drkgray.png in Resources */,
+				FEA37F621EBBC0FE000D152D /* Back-20.png in Resources */,
+				FEA37F601EBBC08A000D152D /* Back-50.png in Resources */,
 				FE31F8301E956C73005DC0A7 /* orangeBg.png in Resources */,
 				FEFC7F181EBAF9EC0078BD8B /* Rectangle.png in Resources */,
 				FE31F8191E956C17005DC0A7 /* LaunchScreen.storyboard in Resources */,
@@ -397,11 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5JGKWLKF6Y;
 				INFOPLIST_FILE = canToo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.canToo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -409,11 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5JGKWLKF6Y;
 				INFOPLIST_FILE = canToo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.canToo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

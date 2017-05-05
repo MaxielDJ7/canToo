@@ -2,6 +2,10 @@
 //  PopUpViewController.swift
 //  canToo
 //
+//  Handles the quote pop view:
+//      - Generates quote
+//      - Opens and closes view
+//
 //  Created by Maxiel De Jesus on 4/5/17.
 //  Copyright © 2017 Maxiel De Jesus. All rights reserved.
 //
@@ -19,7 +23,6 @@ class PopUpViewController: UIViewController {
     
     var previousQuote : UInt32 = 0
 
-    
     @IBOutlet weak var quoteText: UILabel!
     
     @IBOutlet weak var popUp: UIView!
@@ -37,6 +40,8 @@ class PopUpViewController: UIViewController {
     }
 
     //Actions
+    
+    //Dismisses segue
     
     @IBAction func closePopUp(_ sender: Any) {
         
@@ -58,6 +63,8 @@ class PopUpViewController: UIViewController {
         }
    
      }*/
+    
+    // Generates random number and presents the selected quote on the pop up
     
     func generateQuote(){
         var randomQuote = arc4random_uniform(UInt32(newArray.count))

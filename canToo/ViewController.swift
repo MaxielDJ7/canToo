@@ -2,6 +2,12 @@
 //  ViewController.swift
 //  canToo
 //
+//  Checks for touch 
+//  Retrieves DB information
+//  Parses through JSON
+//  Fires local notifications
+//  Manages segue and passes information through it
+//
 //  Created by Maxiel De Jesus on 4/5/17.
 //  Copyright © 2017 Maxiel De Jesus. All rights reserved.
 //
@@ -14,7 +20,7 @@ import Darwin
 
 class ViewController: UIViewController {
     
-    // MARK: Properties
+    // Properties
 
     @IBOutlet weak var toucanTut: UIImageView!
     @IBOutlet weak var canTooLabel: UILabel!
@@ -32,19 +38,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Recognizes if image was touched
         
         tapRecon.addTarget(self, action: #selector(ViewController.tappedView))
         
         toucanTut.isUserInteractionEnabled = true
         toucanTut.addGestureRecognizer(tapRecon)
         
-
-        
-        
-        let urlPath: String = "https://web.njit.edu/~mid6/service.php"
-        
         //Retrieves data from DB and handles it
+
+        let urlPath: String = "https://web.njit.edu/~mid6/service.php"
         
         if let url = URL(string: urlPath){
             
@@ -60,9 +64,9 @@ class ViewController: UIViewController {
 
     }
     
-    //MARK: Actions
+    //Actions
     
-    
+    // When image is tapped direct to appropriate view via segue
     
     @IBAction func tappedView() {
         
@@ -72,9 +76,7 @@ class ViewController: UIViewController {
 
     }
     
-   
-   
-    
+    // Parses through json recieved from DB
     
     func parse(json: JSON) {
         
@@ -95,10 +97,13 @@ class ViewController: UIViewController {
             //print(data)
         }
         
+        // Runs notifications once quotes are recieved
+        
         appointmentNotification()
 
     }
     
+    // Segue preparation. Passes array of quotes with segue to the PopUpViewController.
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -110,7 +115,6 @@ class ViewController: UIViewController {
         }
         
     }
-    
     
     
     //Creates local notifications

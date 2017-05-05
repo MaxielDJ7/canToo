@@ -2,6 +2,9 @@
 //  TableViewController.swift
 //  canToo
 //
+//  Handles the settings view and populates the table with desire setting options from an array
+//
+//
 //  Created by Maxiel De Jesus on 5/4/17.
 //  Copyright © 2017 Maxiel De Jesus. All rights reserved.
 //
@@ -21,24 +24,28 @@ class TableViewController: UITableViewController {
         return 0
     }*/
 
+     // Creates rows
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+       
         
         
         return settingsRows.count
     }
 
+    // Creates cell with option
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        // Configure the cell...
+        
         
         cell.textLabel?.text = settingsRows[indexPath.row]
 
         return cell
     }
     
+    // Directs the selected option to it appropriate view
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row

@@ -19,6 +19,8 @@ class NotificationSettingsView: UIViewController {
         super.viewDidLoad()
         
         }
+    
+    // Saves stepper value as a user default to later access on ViewController.swift when firing notifications
 
     @IBAction func stepperValueChange(_ sender: AnyObject) {
         

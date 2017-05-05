@@ -11,6 +11,7 @@ import UserNotifications
 import UserNotificationsUI
 import Darwin
 
+
 class ViewController: UIViewController {
     
     // MARK: Properties
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var settingsGear: UIImageView!
     
+    var defaults = UserDefaults.standard
         
     let quoteArray: NSMutableArray = NSMutableArray()
     
@@ -62,7 +64,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func tappedView(gesture: UIGestureRecognizer, sender: Any) {
+    @IBAction func tappedView() {
         
 
         self.performSegue(withIdentifier: "popUpSegue", sender: self)
@@ -117,6 +119,23 @@ class ViewController: UIViewController {
         
         var randomQuote = arc4random_uniform(UInt32(quoteArray.count))
         
+        let interval = 60.0
+        
+        var defaultTime: Double
+        
+        let time = UserDefaults().double(forKey: "NotificationStepperValue")
+            
+        switch time{
+        case 1,2,3:
+            defaultTime = interval * time
+            
+        default:
+            defaultTime = interval
+            break;
+            
+        }
+        
+     
         while previousQuote == randomQuote{
             randomQuote = arc4random_uniform(UInt32(quoteArray.count))
         }
@@ -127,16 +146,19 @@ class ViewController: UIViewController {
         content.body = String(describing: quoteArray[Int(randomQuote)])
         content.sound = UNNotificationSound.default()
         
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 30, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: defaultTime, repeats: false)
+        
         let request = UNNotificationRequest.init(identifier: UUID().uuidString, content: content, trigger: trigger)
         
         let center = UNUserNotificationCenter.current()
         center.add(request) { (error) in
             print(error as Any)
         }
-        print ("Should recieve notification in 10 sec")
+        print ("Should recieve notification")
         
     }
+    
+    
  
 }
 
